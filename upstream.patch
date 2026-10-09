@@ -1,0 +1,28 @@
+diff --git a/src/demo/infer_single_image.py b/src/demo/infer_single_image.py
+index 7ac9d34..598e7f1 100644
+--- a/src/demo/infer_single_image.py
++++ b/src/demo/infer_single_image.py
+@@ -553,7 +553,7 @@ def load_demo_config(
+ 
+ 
+ def _extract_state_dict(checkpoint_path: Path) -> dict[str, torch.Tensor]:
+-    checkpoint = torch.load(checkpoint_path, map_location="cpu", weights_only=True)
++    checkpoint = torch.load(checkpoint_path, map_location="cpu", weights_only=True, mmap=True)
+     if "state_dict" in checkpoint:
+         return checkpoint["state_dict"]
+     if isinstance(checkpoint, dict):
+diff --git a/src/utils/gaussians.py b/src/utils/gaussians.py
+index 7dae5b3..867daf6 100644
+--- a/src/utils/gaussians.py
++++ b/src/utils/gaussians.py
+@@ -393,8 +393,8 @@ def save_ply(
+     ]
+ 
+     num_gaussians = len(xyz)
+-    elements = np.empty(num_gaussians, dtype=dtype_full)
+-    elements[:] = list(map(tuple, attributes.detach().cpu().numpy()))
++    attributes_np = np.ascontiguousarray(attributes.detach().cpu().numpy(), dtype=np.float32)
++    elements = attributes_np.view(np.dtype(dtype_full)).reshape(-1)
+     vertex_elements = PlyElement.describe(elements, "vertex")
+ 
+     image_height, image_width = image_shape

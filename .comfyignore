@@ -1,0 +1,9 @@
+.github/
+tests/
+work/
+outputs/
+.venv/
+upstream/
+__pycache__/
+*.pyc
+

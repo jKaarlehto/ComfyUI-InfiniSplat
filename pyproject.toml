@@ -1,0 +1,22 @@
+[project]
+name = "infinisplat"
+version = "0.1.0"
+description = "InfiniSplat image-to-Gaussian generation with native 3D preview, batches, and optional camera calibration."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = ["numpy", "Pillow"]
+classifiers = [
+    "Operating System :: Microsoft :: Windows",
+    "Environment :: GPU :: NVIDIA CUDA",
+]
+
+[project.urls]
+Repository = "https://github.com/jKaarlehto/ComfyUI-InfiniSplat"
+"Bug Tracker" = "https://github.com/jKaarlehto/ComfyUI-InfiniSplat/issues"
+
+[tool.comfy]
+PublisherId = "jKaarlehto"
+DisplayName = "InfiniSplat"
+requires-comfyui = ">=0.39.2"
+
