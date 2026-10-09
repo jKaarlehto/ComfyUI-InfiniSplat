@@ -16,7 +16,7 @@ Repository = "https://github.com/jKaarlehto/ComfyUI-InfiniSplat"
 "Bug Tracker" = "https://github.com/jKaarlehto/ComfyUI-InfiniSplat/issues"
 
 [tool.comfy]
-PublisherId = "jKaarlehto"
+PublisherId = "jkaa"
 DisplayName = "InfiniSplat"
 requires-comfyui = ">=0.39.2"
 

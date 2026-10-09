@@ -57,7 +57,7 @@ On the tested RTX 5090 Laptop, one example calibration took 2.68 seconds includi
 
 ## Publish
 
-Registry package: `infinisplat`, publisher: `jKaarlehto`.
+Registry package: `infinisplat`, publisher: `jkaa`.
 
 Set the repository's GitHub Actions secret `REGISTRY_ACCESS_TOKEN` to a publishing key for this publisher, then run **Publish to Comfy Registry** from Actions. The workflow is manually triggered so ordinary code pushes do not publish a new version. Each registry version is immutable; bump `project.version` before publishing another release.
 
