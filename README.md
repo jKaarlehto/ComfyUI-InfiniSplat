@@ -1,6 +1,12 @@
-# ComfyUI-InfiniSplat
+# InfiniSplat for ComfyUI - 3D Gaussian Splatting
 
-InfiniSplat single-image Gaussian generation with native ComfyUI 3D file output and built-in splat preview. NVIDIA CUDA required.
+Generate 3D Gaussian splats from a single RGB image with InfiniSplat. This ComfyUI custom node provides an image-to-3D / image-to-splat workflow with native Gaussian splatting preview, Gaussian PLY export, batch processing, and optional camera calibration. NVIDIA CUDA required.
+
+Use the native `model_3d` output with ComfyUI's Preview Splat or convert it to `SPLAT` for native 3D Gaussian splatting (3DGS) tools. Save individual splats or image batches as `.ply` files for downstream 3D workflows.
+
+## Related Gaussian splatting models
+
+For users exploring single-image 3D generation with [Apple SHARP](https://github.com/apple/ml-sharp) or [TripoSplat](https://github.com/VAST-AI-Research/TripoSplat), this package adds InfiniSplat to the ComfyUI image-to-splat workflow. The model implemented here is InfiniSplat; SHARP and TripoSplat have their own implementations.
 
 ## Install
 
@@ -18,7 +24,7 @@ The installer creates a separate Python 3.11 / PyTorch 2.9 CUDA 12.8 environment
 
 ## Use
 
-Load Image → InfiniSplat (Image to PLY) → PreviewGaussians. The viewer comes from [ComfyUI-GaussianPack](https://github.com/PozzettiAndrea/ComfyUI-GaussianPack).
+Load Image -> InfiniSplat (Image to PLY) -> **Preview Splat** (`PreviewGaussianSplat`, built into ComfyUI). Connect `model_3d`. For native tensor tools, connect **3D File to Splat**.
 
 - Input: one RGB image, or a batch processed sequentially.
 - `focal_length_mm`: 35mm-equivalent focal length; default 30mm. ComfyUI IMAGE tensors do not retain EXIF metadata.

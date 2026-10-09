@@ -1,9 +1,10 @@
 [project]
 name = "infinisplat"
-version = "0.1.0"
-description = "InfiniSplat image-to-Gaussian generation with native 3D preview, batches, and optional camera calibration."
+version = "0.1.1"
+description = "Generate 3D Gaussian splats from images with InfiniSplat. Gaussian splatting / 3DGS for ComfyUI with native 3D preview, PLY export, batches, and optional camera calibration."
 readme = "README.md"
 requires-python = ">=3.10"
+keywords = ["infinisplat", "gaussian-splatting", "gaussian-splats", "3dgs", "3d", "image-to-3d", "single-image-reconstruction", "ply", "comfyui"]
 license = { file = "LICENSE" }
 dependencies = ["numpy", "Pillow"]
 classifiers = [
@@ -17,6 +18,6 @@ Repository = "https://github.com/jKaarlehto/ComfyUI-InfiniSplat"
 
 [tool.comfy]
 PublisherId = "jkaa"
-DisplayName = "InfiniSplat"
+DisplayName = "InfiniSplat - 3D Gaussian Splatting"
 requires-comfyui = ">=0.39.2"
 
