@@ -1,6 +1,6 @@
 [project]
 name = "infinisplat"
-version = "0.1.2"
+version = "0.1.3"
 description = "Generate 3D Gaussian splats from images with InfiniSplat. Gaussian splatting / 3DGS for ComfyUI with native 3D preview, PLY export, batches, and optional camera calibration."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -9,7 +9,6 @@ license = { file = "LICENSE" }
 dependencies = ["numpy", "Pillow"]
 classifiers = [
     "Operating System :: Microsoft :: Windows",
-    "Environment :: GPU :: NVIDIA CUDA",
 ]
 
 [project.urls]
